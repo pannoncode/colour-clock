@@ -14,9 +14,31 @@ function colorClock() {
     if (seconds <= 9) {
         seconds = "0" + seconds;
     }
+    if (seconds >= 10) {
+        var alphab = 'f';
+        var alphac = 'f';
+    }
+    if (seconds >= 20) {
+        var alphab = 'c';
+        var alphac = 'b';
+    }
+    if (seconds >= 30) {
+        var alphab = 'd';
+        var alphac = 'e';
+    }
+    if (seconds >= 40) {
+        var alphab = 'f';
+        var alphac = 'e';
+    }
+    if (seconds >= 50) {
+        var alphab = 'c';
+        var alphac = 'd';
+    }
+
 
     var clockFace = hours + ':' + minutes + ':' + seconds;
-    var hexColor = '#' + minutes + seconds + hours;
+    var hexColor = '#' + alphab + minutes + seconds + alphac + hours;
+
 
     document.getElementById('clock').innerHTML = clockFace;
     document.body.style.background = hexColor;
