@@ -37,7 +37,7 @@ function colorClock() {
 
 
     var clockFace = hours + ':' + minutes + ':' + seconds;
-    var hexColor = '#' + alphab + minutes + seconds + alphac + hours;
+    var hexColor = '#' + alphab + minutes + seconds + hours + alphac;
 
 
     document.getElementById('clock').innerHTML = clockFace;
